@@ -41,12 +41,11 @@ the plugins or the supporting libraries might not be how we'd like. The code
 might be widely known to present patent problems. Distributors should check if
 they want/can ship these plugins.
 
-%package        devel-docs
-Summary:        Development documentation for the GStreamer "ugly" plug-ins
+%package        devel
+Summary:        Development files for the GStreamer "ugly" plug-ins
 Requires:       %{name}%{?_isa} = %{?epoch}:%{version}-%{release}
-BuildArch:      noarch
 
-%description    devel-docs
+%description    devel
 GStreamer is a streaming media framework, based on graphs of elements which
 operate on media data.
 
@@ -56,6 +55,7 @@ the plugins or the supporting libraries might not be how we'd like. The code
 might be widely known to present patent problems. Distributors should check if
 they want/can ship these plugins.
 
+This package contains the development files.
 
 %prep
 %setup -q -n gst-plugins-ugly-%{version}
@@ -99,8 +99,8 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgsttwolame.so
 %{_libdir}/gstreamer-%{majorminor}/libgstx264.so
 
-%files devel-docs
-%doc %{_datadir}/gtk-doc
+%files devel
+%doc %{_datadir}/gtk-doc/html/*
 
 %changelog
 * Sun Jun 19 2016 Simone Caronni <negativo17@gmail.com> - 1:1.8.2-1
