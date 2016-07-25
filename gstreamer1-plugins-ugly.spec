@@ -2,7 +2,7 @@
 
 Name:           gstreamer1-plugins-ugly
 Version:        1.8.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
 License:        LGPLv2+ and LGPLv2
@@ -41,11 +41,12 @@ the plugins or the supporting libraries might not be how we'd like. The code
 might be widely known to present patent problems. Distributors should check if
 they want/can ship these plugins.
 
-%package        devel
+%package        devel-docs
 Summary:        Development files for the GStreamer "ugly" plug-ins
-Requires:       %{name}%{?_isa} = %{?epoch}:%{version}-%{release}
+Requires:       %{name}%{?isa} = %{?epoch}:%{version}-%{release}
+BuildArch:      noarch
 
-%description    devel
+%description    devel-docs
 GStreamer is a streaming media framework, based on graphs of elements which
 operate on media data.
 
@@ -55,7 +56,7 @@ the plugins or the supporting libraries might not be how we'd like. The code
 might be widely known to present patent problems. Distributors should check if
 they want/can ship these plugins.
 
-This package contains the development files.
+This package contains the development documentation.
 
 %prep
 %setup -q -n gst-plugins-ugly-%{version}
@@ -99,9 +100,12 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgsttwolame.so
 %{_libdir}/gstreamer-%{majorminor}/libgstx264.so
 
-%files devel
+%files devel-docs
 %doc %{_datadir}/gtk-doc/html/*
 
 %changelog
+* Mon Jul 25 2016 Simone Caronni <negativo17@gmail.com> - 1:1.8.2-2
+- Rename devel subpackage to devel-docs.
+
 * Sun Jun 19 2016 Simone Caronni <negativo17@gmail.com> - 1:1.8.2-1
 - First build.
