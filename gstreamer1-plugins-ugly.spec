@@ -1,8 +1,8 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.8.2
-Release:        2%{?dist}
+Version:        1.9.1
+Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
 License:        LGPLv2+ and LGPLv2
@@ -10,8 +10,8 @@ URL:            http://gstreamer.freedesktop.org/
 
 Source0:        http://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-%{version}.tar.xz
 
-BuildRequires:  gstreamer1-devel >= 1.8.0
-BuildRequires:  gstreamer1-plugins-base-devel >= 1.8.0
+BuildRequires:  gstreamer1-devel >= 1.9.1
+BuildRequires:  gstreamer1-plugins-base-devel >= 1.9.1
 
 BuildRequires:  a52dec-devel >= 0.7.3
 BuildRequires:  gettext-devel >= 0.17
@@ -23,7 +23,7 @@ BuildRequires:  libid3tag-devel >= 0.15.0
 BuildRequires:  orc-devel >= 0.4.16
 BuildRequires:  pkgconfig(gmodule-no-export-2.0)
 BuildRequires:  pkgconfig(libcdio) >= 0.76
-BuildRequires:  pkgconfig(libmpeg2) >= 0.4.0
+BuildRequires:  pkgconfig(libmpeg2) >= 0.5.1
 BuildRequires:  pkgconfig(libmpg123) >= 1.13
 BuildRequires:  pkgconfig(mad) >= 0.15
 BuildRequires:  pkgconfig(opencore-amrnb) >= 0.1.3
@@ -104,6 +104,9 @@ find %{buildroot} -name '*.la' -delete
 %doc %{_datadir}/gtk-doc/html/*
 
 %changelog
+* Wed Aug 17 2016 Simone Caronni <negativo17@gmail.com> - 1:1.9.1-1
+- Update to 1.9.1.
+
 * Mon Jul 25 2016 Simone Caronni <negativo17@gmail.com> - 1:1.8.2-2
 - Rename devel subpackage to devel-docs.
 
