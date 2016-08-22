@@ -1,8 +1,8 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.8.2
-Release:        2%{?dist}
+Version:        1.8.3
+Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
 License:        LGPLv2+ and LGPLv2
@@ -104,6 +104,9 @@ find %{buildroot} -name '*.la' -delete
 %doc %{_datadir}/gtk-doc/html/*
 
 %changelog
+* Mon Aug 22 2016 Simone Caronni <negativo17@gmail.com> - 1:1.8.3-1
+- Update to 1.8.3.
+
 * Mon Jul 25 2016 Simone Caronni <negativo17@gmail.com> - 1:1.8.2-2
 - Rename devel subpackage to devel-docs.
 
