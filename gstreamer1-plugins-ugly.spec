@@ -2,7 +2,7 @@
 
 Name:           gstreamer1-plugins-ugly
 Version:        1.10.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
 License:        LGPLv2+ and LGPLv2
@@ -30,6 +30,10 @@ BuildRequires:  pkgconfig(opencore-amrnb) >= 0.1.3
 BuildRequires:  pkgconfig(opencore-amrwb) >= 0.1.3
 BuildRequires:  pkgconfig(twolame) >= 0.3.10
 BuildRequires:  pkgconfig(x264) >= 0.120
+
+Obsoletes:      gstreamer1-plugin-mpg123 < %{?epoch}:%{version}-%{release}
+Provides:       gstreamer1-plugin-mpg123 = %{?epoch}:%{version}-%{release}
+Provides:       gstreamer1-plugin-mpg123%{?_isa} = %{?epoch}:%{version}-%{release}
 
 %description
 GStreamer is a streaming media framework, based on graphs of elements which
@@ -104,6 +108,9 @@ find %{buildroot} -name '*.la' -delete
 %doc %{_datadir}/gtk-doc/html/*
 
 %changelog
+* Tue Nov 15 2016 Simone Caronni <negativo17@gmail.com> - 1:1.10.0-2
+- Obsolete/provide gstreamer1-plugin-bad.
+
 * Thu Nov 10 2016 Simone Caronni <negativo17@gmail.com> - 1:1.10.0-1
 - Update to 1.10.0.
 
