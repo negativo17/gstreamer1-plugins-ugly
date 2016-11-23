@@ -109,7 +109,7 @@ find %{buildroot} -name '*.la' -delete
 
 %changelog
 * Tue Nov 15 2016 Simone Caronni <negativo17@gmail.com> - 1:1.10.0-2
-- Obsolete/provide gstreamer1-plugin-bad.
+- Obsolete/provide gstreamer1-plugin-mpg123.
 
 * Thu Nov 10 2016 Simone Caronni <negativo17@gmail.com> - 1:1.10.0-1
 - Update to 1.10.0.
