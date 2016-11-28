@@ -1,8 +1,8 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.10.0
-Release:        2%{?dist}
+Version:        1.10.1
+Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
 License:        LGPLv2+ and LGPLv2
@@ -10,8 +10,8 @@ URL:            http://gstreamer.freedesktop.org/
 
 Source0:        http://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-%{version}.tar.xz
 
-BuildRequires:  gstreamer1-devel >= 1.10.0
-BuildRequires:  gstreamer1-plugins-base-devel >= 1.10.0
+BuildRequires:  gstreamer1-devel >= 1.10.1
+BuildRequires:  gstreamer1-plugins-base-devel >= 1.10.1
 
 BuildRequires:  a52dec-devel >= 0.7.3
 BuildRequires:  gettext-devel >= 0.17
@@ -108,6 +108,9 @@ find %{buildroot} -name '*.la' -delete
 %doc %{_datadir}/gtk-doc/html/*
 
 %changelog
+* Mon Nov 28 2016 Simone Caronni <negativo17@gmail.com> - 1:1.10.1-1
+- Update to 1.10.1.
+
 * Tue Nov 15 2016 Simone Caronni <negativo17@gmail.com> - 1:1.10.0-2
 - Obsolete/provide gstreamer1-plugin-mpg123.
 
