@@ -10,8 +10,8 @@ URL:            http://gstreamer.freedesktop.org/
 
 Source0:        http://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-%{version}.tar.xz
 
-BuildRequires:  gstreamer1-devel >= 1.10.1
-BuildRequires:  gstreamer1-plugins-base-devel >= 1.10.1
+BuildRequires:  gstreamer1-devel >= %{version}
+BuildRequires:  gstreamer1-plugins-base-devel >= %{version}
 
 BuildRequires:  a52dec-devel >= 0.7.3
 BuildRequires:  gettext-devel >= 0.17
