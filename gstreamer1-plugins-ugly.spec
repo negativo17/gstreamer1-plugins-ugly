@@ -1,8 +1,8 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.10.4
-Release:        2%{?dist}
+Version:        1.10.5
+Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
 License:        LGPLv2+ and LGPLv2
@@ -111,6 +111,9 @@ find %{buildroot} -name '*.la' -delete
 %doc %{_datadir}/gtk-doc/html/*
 
 %changelog
+* Sun Jun 25 2017 Simone Caronni <negativo17@gmail.com> - 1:1.10.5-1
+- Update to 1.10.5.
+
 * Thu May 18 2017 Simone Caronni <negativo17@gmail.com> - 1:1.10.4-2
 - Also obsolete/provide gstreamer-plugins-ugly-free.
 
