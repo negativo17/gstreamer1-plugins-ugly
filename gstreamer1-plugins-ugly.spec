@@ -1,8 +1,8 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.4.5
-Release:        2%{?dist}
+Version:        1.10.4
+Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
 License:        LGPLv2+ and LGPLv2
@@ -10,8 +10,8 @@ URL:            http://gstreamer.freedesktop.org/
 
 Source0:        http://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-%{version}.tar.xz
 
-BuildRequires:  gstreamer1-devel >= 1.4.0
-BuildRequires:  gstreamer1-plugins-base-devel >= 1.4.0
+BuildRequires:  gstreamer1-devel >= %{version}
+BuildRequires:  gstreamer1-plugins-base-devel >= %{version}
 
 BuildRequires:  a52dec-devel >= 0.7.3
 BuildRequires:  gettext-devel >= 0.17
@@ -23,7 +23,8 @@ BuildRequires:  libid3tag-devel >= 0.15.0
 BuildRequires:  orc-devel >= 0.4.16
 BuildRequires:  pkgconfig(gmodule-no-export-2.0)
 BuildRequires:  pkgconfig(libcdio) >= 0.76
-BuildRequires:  pkgconfig(libmpeg2) >= 0.4.0
+BuildRequires:  pkgconfig(libmpeg2) >= 0.5.1
+BuildRequires:  pkgconfig(libmpg123) >= 1.13
 BuildRequires:  pkgconfig(mad) >= 0.15
 BuildRequires:  pkgconfig(opencore-amrnb) >= 0.1.3
 BuildRequires:  pkgconfig(opencore-amrwb) >= 0.1.3
@@ -33,6 +34,9 @@ BuildRequires:  pkgconfig(x264) >= 0.120
 Obsoletes:      gstreamer1-plugin-mpg123 < %{?epoch}:%{version}-%{release}
 Provides:       gstreamer1-plugin-mpg123 = %{?epoch}:%{version}-%{release}
 Provides:       gstreamer1-plugin-mpg123%{?_isa} = %{?epoch}:%{version}-%{release}
+Obsoletes:      %{name}-free < %{?epoch}:%{version}-%{release}
+Provides:       %{name}-free = %{?epoch}:%{version}-%{release}
+Provides:       %{name}-free%{?_isa} = %{?epoch}:%{version}-%{release}
 
 %description
 GStreamer is a streaming media framework, based on graphs of elements which
@@ -82,7 +86,6 @@ find %{buildroot} -name '*.la' -delete
 %find_lang gst-plugins-ugly-%{majorminor}
 
 %files -f gst-plugins-ugly-%{majorminor}.lang
-%{!?_licensedir:%global license %%doc}
 %license COPYING
 %doc AUTHORS README REQUIREMENTS
 %{_datadir}/gstreamer-%{majorminor}/presets/*.prs
@@ -99,6 +102,7 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgstlame.so
 %{_libdir}/gstreamer-%{majorminor}/libgstmad.so
 %{_libdir}/gstreamer-%{majorminor}/libgstmpeg2dec.so
+%{_libdir}/gstreamer-%{majorminor}/libgstmpg123.so
 %{_libdir}/gstreamer-%{majorminor}/libgsttwolame.so
 %{_libdir}/gstreamer-%{majorminor}/libgstx264.so
 
@@ -106,6 +110,9 @@ find %{buildroot} -name '*.la' -delete
 %doc %{_datadir}/gtk-doc/html/*
 
 %changelog
+* Wed Aug 16 2017 Simone Caronni <negativo17@gmail.com> - 1:1.10.4-1
+- Update to 1.10.4.
+
 * Tue Nov 15 2016 Simone Caronni <negativo17@gmail.com> - 1:1.4.5-2
 - Obsolete/provide gstreamer1-plugin-mpg123.
 
