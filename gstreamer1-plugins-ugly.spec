@@ -2,7 +2,7 @@
 
 Name:           gstreamer1-plugins-ugly
 Version:        1.10.4
-Release:        3%{?dist}
+Release:        4%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
 License:        LGPLv2+ and LGPLv2
@@ -66,7 +66,7 @@ they want/can ship these plugins.
 This package contains the development documentation.
 
 %prep
-%setup -q -n gst-plugins-ugly-%{version}
+%autosetup -p1 -n gst-plugins-ugly-%{version}
 
 %build
 %configure \
@@ -77,8 +77,7 @@ This package contains the development documentation.
     --enable-experimental \
     --with-package-name="Fedora GStreamer-plugins-ugly package" \
     --with-package-origin="http://negativo17.org"
-make %{?_smp_mflags}
-
+%make_build
 
 %install
 %make_install
@@ -110,6 +109,9 @@ find %{buildroot} -name '*.la' -delete
 %doc %{_datadir}/gtk-doc/html/*
 
 %changelog
+* Fri Sep 21 2018 Simone Caronni <negativo17@gmail.com> - 1:1.10.4-4
+- Rebuild for updated dependencies.
+
 * Tue May 01 2018 Simone Caronni <negativo17@gmail.com> - 1:1.10.4-3
 - Rebuild for updated dependencies.
 
