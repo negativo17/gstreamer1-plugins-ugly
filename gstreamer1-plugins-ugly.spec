@@ -1,7 +1,7 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.14.2
+Version:        1.14.3
 Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
@@ -14,6 +14,7 @@ BuildRequires:  gstreamer1-devel >= %{version}
 BuildRequires:  gstreamer1-plugins-base-devel >= %{version}
 
 BuildRequires:  a52dec-devel >= 0.7.3
+BuildRequires:  gcc-c++
 BuildRequires:  gettext-devel >= 0.17
 BuildRequires:  gtk-doc >= 1.12
 BuildRequires:  libdvdread-devel
@@ -106,6 +107,9 @@ find %{buildroot} -name '*.la' -delete
 %doc %{_datadir}/gtk-doc/html/*
 
 %changelog
+* Wed Sep 26 2018 Simone Caronni <negativo17@gmail.com> - 1:1.14.3-1
+- Update to 1.14.3.
+
 * Tue Aug 28 2018 Simone Caronni <negativo17@gmail.com> - 1:1.14.2-1
 - Update to 1.14.2.
 
