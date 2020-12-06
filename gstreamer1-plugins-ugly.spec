@@ -2,7 +2,7 @@
 
 Name:           gstreamer1-plugins-ugly
 Version:        1.14.5
-Release:        1%{?dist}
+Release:        2%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
 License:        LGPLv2+ and LGPLv2
@@ -107,6 +107,10 @@ find %{buildroot} -name '*.la' -delete
 %doc %{_datadir}/gtk-doc/html/*
 
 %changelog
+* Sun Dec 06 2020 Simone Caronni <negativo17@gmail.com> - 1:1.14.5-2
+- Rebuild for updated dependencies.
+- Trim changelog.
+
 * Mon Jul 13 2020 Simone Caronni <negativo17@gmail.com> - 1:1.14.5-1
 - Update to 1.14.5.
 
@@ -118,21 +122,3 @@ find %{buildroot} -name '*.la' -delete
 
 * Thu Oct 24 2019 Simone Caronni <negativo17@gmail.com> - 1:1.10.4-5
 - Rebuild for updated dependencies.
-
-* Fri Sep 21 2018 Simone Caronni <negativo17@gmail.com> - 1:1.10.4-4
-- Rebuild for updated dependencies.
-
-* Tue May 01 2018 Simone Caronni <negativo17@gmail.com> - 1:1.10.4-3
-- Rebuild for updated dependencies.
-
-* Wed Oct 25 2017 Simone Caronni <negativo17@gmail.com> - 1:1.10.4-2
-- Rebuild for x264 and mpg123 updates.
-
-* Wed Aug 16 2017 Simone Caronni <negativo17@gmail.com> - 1:1.10.4-1
-- Update to 1.10.4.
-
-* Tue Nov 15 2016 Simone Caronni <negativo17@gmail.com> - 1:1.4.5-2
-- Obsolete/provide gstreamer1-plugin-mpg123.
-
-* Wed Aug 17 2016 Simone Caronni <negativo17@gmail.com> - 1:1.4.5-1
-- Initial import.
