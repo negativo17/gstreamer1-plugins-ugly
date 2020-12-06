@@ -2,7 +2,7 @@
 
 Name:           gstreamer1-plugins-ugly
 Version:        1.16.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
 License:        LGPLv2+ and LGPLv2
@@ -107,6 +107,10 @@ find %{buildroot} -name '*.la' -delete
 %doc %{_datadir}/gtk-doc/html/*
 
 %changelog
+* Sun Dec 06 2020 Simone Caronni <negativo17@gmail.com> - 1:1.16.2-3
+- Rebuild for updated dependencies.
+- Trim changelog.
+
 * Wed Jul 15 2020 Simone Caronni <negativo17@gmail.com> - 1:1.16.2-2
 - Rebuild for updated dependencies.
 
@@ -127,73 +131,3 @@ find %{buildroot} -name '*.la' -delete
 
 * Wed Apr 03 2019 Simone Caronni <negativo17@gmail.com> - 1:1.15.2-1
 - Update to 1.15.2.
-
-* Sat Oct 20 2018 Simone Caronni <negativo17@gmail.com> - 1:1.14.4-1
-- Update to 1.14.4.
-
-* Wed Sep 26 2018 Simone Caronni <negativo17@gmail.com> - 1:1.14.3-1
-- Update to 1.14.3.
-
-* Tue Aug 28 2018 Simone Caronni <negativo17@gmail.com> - 1:1.14.2-1
-- Update to 1.14.2.
-
-* Thu Jun 14 2018 Simone Caronni <negativo17@gmail.com> - 1:1.14.1-1
-- Update to 1.14.1.
-
-* Wed May 02 2018 Simone Caronni <negativo17@gmail.com> - 1:1.14.0-1
-- Update to 1.14.0.
-- Update SPEC file.
-
-* Tue May 01 2018 Simone Caronni <negativo17@gmail.com> - 1:1.12.4-2
-- Rebuild for updated dependencies.
-
-* Tue Jan 09 2018 Simone Caronni <negativo17@gmail.com> - 1:1.12.4-1
-- Update to 1.12.4.
-
-* Wed Oct 25 2017 Simone Caronni <negativo17@gmail.com> - 1:1.12.3-2
-- Rebuild for x264 and mpg123 updates.
-
-* Mon Oct 23 2017 Simone Caronni <negativo17@gmail.com> - 1:1.12.3-1
-- Update to 1.12.3.
-
-* Thu Jul 20 2017 Simone Caronni <negativo17@gmail.com> - 1:1.12.2-1
-- Update to 1.12.2.
-
-* Sat Jun 24 2017 Simone Caronni <negativo17@gmail.com> - 1:1.12.1-1
-- Update to 1.12.1.
-
-* Thu May 18 2017 Simone Caronni <negativo17@gmail.com> - 1:1.12.0-2
-- Also obsolete/provide gstreamer-plugins-ugly-free.
-
-* Sat May 13 2017 Simone Caronni <negativo17@gmail.com> - 1:1.12.0-1
-- Update to 1.12.0.
-
-* Wed Apr 19 2017 Simone Caronni <negativo17@gmail.com> - 1:1.11.90-1
-- Update to 1.11.90.
-
-* Mon Dec 05 2016 Simone Caronni <negativo17@gmail.com> - 1:1.10.2-1
-- Update to 1.10.2.
-
-* Mon Nov 28 2016 Simone Caronni <negativo17@gmail.com> - 1:1.10.1-1
-- Update to 1.10.1.
-
-* Tue Nov 15 2016 Simone Caronni <negativo17@gmail.com> - 1:1.10.0-2
-- Obsolete/provide gstreamer1-plugin-mpg123.
-
-* Thu Nov 10 2016 Simone Caronni <negativo17@gmail.com> - 1:1.10.0-1
-- Update to 1.10.0.
-
-* Wed Nov 09 2016 Simone Caronni <negativo17@gmail.com> - 1:1.9.2-2
-- Rebuild for mpg123 update.
-
-* Thu Nov 03 2016 Simone Caronni <negativo17@gmail.com> - 1:1.9.2-1
-- Update to 1.9.2.
-
-* Wed Aug 17 2016 Simone Caronni <negativo17@gmail.com> - 1:1.9.1-1
-- Update to 1.9.1.
-
-* Mon Jul 25 2016 Simone Caronni <negativo17@gmail.com> - 1:1.8.2-2
-- Rename devel subpackage to devel-docs.
-
-* Sun Jun 19 2016 Simone Caronni <negativo17@gmail.com> - 1:1.8.2-1
-- First build.
