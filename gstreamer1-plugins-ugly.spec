@@ -27,6 +27,7 @@ BuildRequires:  pkgconfig(mad) >= 0.15
 BuildRequires:  pkgconfig(opencore-amrnb) >= 0.1.3
 BuildRequires:  pkgconfig(opencore-amrwb) >= 0.1.3
 BuildRequires:  pkgconfig(x264) >= 0.120
+BuildRequires:  python3
 
 Obsoletes:      %{name}-free < %{?epoch}:%{version}-%{release}
 Provides:       %{name}-free = %{?epoch}:%{version}-%{release}
