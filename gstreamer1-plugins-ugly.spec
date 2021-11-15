@@ -1,7 +1,7 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.19.2
+Version:        1.19.3
 Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
@@ -58,6 +58,7 @@ they want/can ship these plugins.
   -D dvdlpcmdec=enabled \
   -D dvdread=enabled \
   -D dvdsub=enabled \
+  -D gpl=enabled \
   -D mpeg2dec=enabled \
   -D realmedia=enabled \
   -D sidplay=disabled \
@@ -88,6 +89,9 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgstx264.so
 
 %changelog
+* Mon Nov 15 2021 Simone Caronni <negativo17@gmail.com> - 1:1.19.3-1
+- Update to 1.19.3.
+
 * Sun Oct 24 2021 Simone Caronni <negativo17@gmail.com> - 1:1.19.2-1
 - Update to 1.19.2.
 
