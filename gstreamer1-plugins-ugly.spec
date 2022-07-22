@@ -1,8 +1,8 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.20.0
-Release:        2%{?dist}
+Version:        1.20.3
+Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
 License:        LGPLv2+ and LGPLv2
@@ -74,7 +74,7 @@ find %{buildroot} -name '*.la' -delete
 
 %files -f gst-plugins-ugly-%{majorminor}.lang
 %license COPYING
-%doc AUTHORS README REQUIREMENTS ChangeLog
+%doc AUTHORS NEWS README.md REQUIREMENTS
 %{_datadir}/gstreamer-%{majorminor}/presets/*.prs
 %{_libdir}/gstreamer-%{majorminor}/libgstasf.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvdlpcmdec.so
@@ -90,6 +90,9 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgstx264.so
 
 %changelog
+* Fri Jul 22 2022 Simone Caronni <negativo17@gmail.com> - 1:1.20.3-1
+- Update to 1.20.3.
+
 * Fri Apr 08 2022 Simone Caronni <negativo17@gmail.com> - 1:1.20.0-2
 - Rebuild for updated depdendencies.
 
