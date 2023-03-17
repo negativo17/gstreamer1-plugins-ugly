@@ -1,7 +1,7 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.20.5
+Version:        1.22.1
 Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
@@ -63,8 +63,8 @@ they want/can ship these plugins.
   -D realmedia=enabled \
   -D sidplay=disabled \
   -D x264=enabled \
-  -D x264_libraries=libx264_main10.so \
-  -D xingmux=enabled
+  -D x264_libraries=libx264_main10.so
+
 %meson_build
 
 %install
@@ -79,7 +79,6 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgstasf.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvdlpcmdec.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvdsub.so
-%{_libdir}/gstreamer-%{majorminor}/libgstxingmux.so
 %{_libdir}/gstreamer-%{majorminor}/libgsta52dec.so
 %{_libdir}/gstreamer-%{majorminor}/libgstamrnb.so
 %{_libdir}/gstreamer-%{majorminor}/libgstamrwbdec.so
@@ -90,6 +89,9 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgstx264.so
 
 %changelog
+* Fri Mar 17 2023 Simone Caronni <negativo17@gmail.com> - 1:1.22.1-1
+- Update to 1.22.1.
+
 * Fri Jan 20 2023 Simone Caronni <negativo17@gmail.com> - 1:1.20.5-1
 - Update to 1.20.5.
 
