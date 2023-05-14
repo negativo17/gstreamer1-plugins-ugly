@@ -1,7 +1,7 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.22.1
+Version:        1.22.2
 Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
@@ -89,6 +89,9 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgstx264.so
 
 %changelog
+* Sun May 14 2023 Simone Caronni <negativo17@gmail.com> - 1:1.22.2-1
+- Update to 1.22.2.
+
 * Fri Mar 17 2023 Simone Caronni <negativo17@gmail.com> - 1:1.22.1-1
 - Update to 1.22.1.
 
