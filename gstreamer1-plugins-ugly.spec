@@ -1,7 +1,7 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.18.4
+Version:        1.22.1
 Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
@@ -58,11 +58,13 @@ they want/can ship these plugins.
   -D dvdlpcmdec=enabled \
   -D dvdread=enabled \
   -D dvdsub=enabled \
+  -D gpl=enabled \
   -D mpeg2dec=enabled \
   -D realmedia=enabled \
   -D sidplay=disabled \
   -D x264=enabled \
-  -D xingmux=enabled
+  -D x264_libraries=libx264_main10.so
+
 %meson_build
 
 %install
@@ -72,12 +74,11 @@ find %{buildroot} -name '*.la' -delete
 
 %files -f gst-plugins-ugly-%{majorminor}.lang
 %license COPYING
-%doc AUTHORS README REQUIREMENTS ChangeLog
+%doc AUTHORS NEWS README.md REQUIREMENTS
 %{_datadir}/gstreamer-%{majorminor}/presets/*.prs
 %{_libdir}/gstreamer-%{majorminor}/libgstasf.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvdlpcmdec.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvdsub.so
-%{_libdir}/gstreamer-%{majorminor}/libgstxingmux.so
 %{_libdir}/gstreamer-%{majorminor}/libgsta52dec.so
 %{_libdir}/gstreamer-%{majorminor}/libgstamrnb.so
 %{_libdir}/gstreamer-%{majorminor}/libgstamrwbdec.so
@@ -88,6 +89,9 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgstx264.so
 
 %changelog
+* Thu Nov 16 2023 Simone Caronni <negativo17@gmail.com> - 1:1.22.1-1
+- Update to 1.22.1.
+
 * Mon Apr 12 2021 Simone Caronni <negativo17@gmail.com> - 1:1.18.4-1
 - Update to 1.18.4.
 
