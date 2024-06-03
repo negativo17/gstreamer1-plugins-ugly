@@ -1,7 +1,7 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.22.12
+Version:        1.24.4
 Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
@@ -24,8 +24,6 @@ BuildRequires:  pkgconfig(gmodule-no-export-2.0)
 BuildRequires:  pkgconfig(libcdio) >= 0.76
 BuildRequires:  pkgconfig(libmpeg2) >= 0.5.1
 BuildRequires:  pkgconfig(mad) >= 0.15
-BuildRequires:  pkgconfig(opencore-amrnb) >= 0.1.3
-BuildRequires:  pkgconfig(opencore-amrwb) >= 0.1.3
 BuildRequires:  pkgconfig(x264) >= 0.120
 
 Obsoletes:      %{name}-free < %{?epoch}:%{version}-%{release}
@@ -50,8 +48,6 @@ they want/can ship these plugins.
   -D package-name="Fedora GStreamer-plugins-ugly package" \
   -D package-origin="https://negativo17.org" \
   -D a52dec=enabled \
-  -D amrnb=enabled \
-  -D amrwbdec=enabled \
   -D asfdemux=enabled \
   -D cdio=enabled \
   -D doc=disabled \
@@ -80,8 +76,6 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgstdvdlpcmdec.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvdsub.so
 %{_libdir}/gstreamer-%{majorminor}/libgsta52dec.so
-%{_libdir}/gstreamer-%{majorminor}/libgstamrnb.so
-%{_libdir}/gstreamer-%{majorminor}/libgstamrwbdec.so
 %{_libdir}/gstreamer-%{majorminor}/libgstcdio.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvdread.so
 %{_libdir}/gstreamer-%{majorminor}/libgstmpeg2dec.so
@@ -89,6 +83,10 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgstx264.so
 
 %changelog
+* Mon Jun 03 2024 Simone Caronni <negativo17@gmail.com> - 1:1.24.4-1
+- Update to 1.24.4.
+- Drop amrnb/amrwb.
+
 * Sat May 04 2024 Simone Caronni <negativo17@gmail.com> - 1:1.22.12-1
 - Update to 1.22.12.
 
