@@ -1,7 +1,7 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.24.11
+Version:        1.26.0
 Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
@@ -83,6 +83,10 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgstx264.so
 
 %changelog
+* Sat Mar 29 2025 Simone Caronni <negativo17@gmail.com> - 1:1.26.0-1
+- Update to 1.26.0.
+- Trim changelog.
+
 * Sat Jan 11 2025 Simone Caronni <negativo17@gmail.com> - 1:1.24.11-1
 - Update to 1.24.11.
 
@@ -116,79 +120,3 @@ find %{buildroot} -name '*.la' -delete
 
 * Mon Jan 29 2024 Simone Caronni <negativo17@gmail.com> - 1:1.22.9-1
 - Update to 1.22.9.
-
-* Fri Dec 22 2023 Simone Caronni <negativo17@gmail.com> - 1:1.22.8-1
-- Update to 1.22.8.
-
-* Mon Nov 20 2023 Simone Caronni <negativo17@gmail.com> - 1:1.22.7-1
-- Update to 1.22.7.
-
-* Mon Aug 07 2023 Simone Caronni <negativo17@gmail.com> - 1:1.22.5-1
-- Update to 1.22.5.
-
-* Mon Jun 05 2023 Simone Caronni <negativo17@gmail.com> - 1:1.22.3-1
-- Update to 1.22.3.
-
-* Sun May 14 2023 Simone Caronni <negativo17@gmail.com> - 1:1.22.2-1
-- Update to 1.22.2.
-
-* Fri Mar 17 2023 Simone Caronni <negativo17@gmail.com> - 1:1.22.1-1
-- Update to 1.22.1.
-
-* Fri Jan 20 2023 Simone Caronni <negativo17@gmail.com> - 1:1.20.5-1
-- Update to 1.20.5.
-
-* Fri Jul 22 2022 Simone Caronni <negativo17@gmail.com> - 1:1.20.3-1
-- Update to 1.20.3.
-
-* Fri Apr 08 2022 Simone Caronni <negativo17@gmail.com> - 1:1.20.0-2
-- Rebuild for updated depdendencies.
-
-* Wed Feb 09 2022 Simone Caronni <negativo17@gmail.com> - 1:1.20.0-1
-- Update to 1.20.0.
-
-* Mon Nov 15 2021 Simone Caronni <negativo17@gmail.com> - 1:1.19.3-1
-- Update to 1.19.3.
-
-* Sun Oct 24 2021 Simone Caronni <negativo17@gmail.com> - 1:1.19.2-1
-- Update to 1.19.2.
-
-* Wed Sep 22 2021 Fabio Valentini <decathorpe@gmail.com> - 1:1.19.1-1
-- Update to 1.19.1.
-
-* Mon Jul 26 2021 Simone Caronni <negativo17@gmail.com> - 1:1.18.4-2
-- Rebuild for updated dependencies.
-
-* Mon Apr 12 2021 Simone Caronni <negativo17@gmail.com> - 1:1.18.4-1
-- Update to 1.18.4.
-
-* Thu Jan 14 2021 Simone Caronni <negativo17@gmail.com> - 1:1.18.2-1
-- Update to 1.18.2.
-
-* Tue Dec 15 2020 Simone Caronni <negativo17@gmail.com> - 1:1.18.1-2
-- Rebuild for updated dependencies
-
-* Sun Nov 01 2020 Simone Caronni <negativo17@gmail.com> - 1:1.18.1-1
-- Update to 1.18.1, rebase on Meson.
-- Trim changelog.
-
-* Wed Jul 15 2020 Simone Caronni <negativo17@gmail.com> - 1:1.16.2-2
-- Rebuild for updated dependencies.
-
-* Tue Feb 11 2020 Simone Caronni <negativo17@gmail.com> - 1:1.16.2-1
-- Update to 1.16.2.
-
-* Sun Jan 19 2020 Simone Caronni <negativo17@gmail.com> - 1:1.16.1-2
-- Rebuild for updated dependencies.
-
-* Wed Oct 09 2019 Simone Caronni <negativo17@gmail.com> - 1:1.16.1-1
-- Update to 1.16.1.
-
-* Mon May 27 2019 Simone Caronni <negativo17@gmail.com> - 1:1.16.0-2
-- Rebuild for updated dependencies.
-
-* Tue Apr 30 2019 Simone Caronni <negativo17@gmail.com> - 1:1.16.0-1
-- Update to 1.16.0.
-
-* Wed Apr 03 2019 Simone Caronni <negativo17@gmail.com> - 1:1.15.2-1
-- Update to 1.15.2.
