@@ -1,7 +1,7 @@
 %global         majorminor 1.0
 
 Name:           gstreamer1-plugins-ugly
-Version:        1.26.10
+Version:        1.28.0
 Release:        1%{?dist}
 Epoch:          1
 Summary:        GStreamer streaming media framework "ugly" plugins
@@ -70,7 +70,7 @@ find %{buildroot} -name '*.la' -delete
 
 %files -f gst-plugins-ugly-%{majorminor}.lang
 %license COPYING
-%doc AUTHORS NEWS README.md REQUIREMENTS
+%doc ChangeLog MAINTAINERS NEWS README.md
 %{_datadir}/gstreamer-%{majorminor}/presets/*.prs
 %{_libdir}/gstreamer-%{majorminor}/libgstasf.so
 %{_libdir}/gstreamer-%{majorminor}/libgstdvdlpcmdec.so
@@ -83,6 +83,10 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/gstreamer-%{majorminor}/libgstx264.so
 
 %changelog
+* Mon Feb 16 2026 Simone Caronni <negativo17@gmail.com> - 1:1.28.0-1
+- Update to 1.28.0.
+- Trim changelog.
+
 * Fri Jan 09 2026 Simone Caronni <negativo17@gmail.com> - 1:1.26.10-1
 - Update to 1.26.10.
 
@@ -116,34 +120,3 @@ find %{buildroot} -name '*.la' -delete
 
 * Sat Jan 11 2025 Simone Caronni <negativo17@gmail.com> - 1:1.24.11-1
 - Update to 1.24.11.
-
-* Mon Dec 09 2024 Simone Caronni <negativo17@gmail.com> - 1:1.24.10-1
-- Update to 1.24.10.
-
-* Mon Nov 04 2024 Simone Caronni <negativo17@gmail.com> - 1:1.24.9-1
-- Update to 1.24.9.
-
-* Tue Oct 01 2024 Simone Caronni <negativo17@gmail.com> - 1:1.24.8-1
-- Update to 1.24.8.
-
-* Sun Sep 01 2024 Simone Caronni <negativo17@gmail.com> - 1:1.24.7-1
-- Update to 1.24.7.
-
-* Sat Aug 24 2024 Simone Caronni <negativo17@gmail.com> - 1:1.24.6-1
-- Update to 1.24.6.
-
-* Tue Jun 25 2024 Simone Caronni <negativo17@gmail.com> - 1:1.24.5-1
-- Update to 1.24.5.
-
-* Mon Jun 03 2024 Simone Caronni <negativo17@gmail.com> - 1:1.24.4-1
-- Update to 1.24.4.
-- Drop amrnb/amrwb.
-
-* Sat May 04 2024 Simone Caronni <negativo17@gmail.com> - 1:1.22.12-1
-- Update to 1.22.12.
-
-* Sun Apr 28 2024 Simone Caronni <negativo17@gmail.com> - 1:1.22.11-1
-- Update to 1.22.11.
-
-* Mon Jan 29 2024 Simone Caronni <negativo17@gmail.com> - 1:1.22.9-1
-- Update to 1.22.9.
